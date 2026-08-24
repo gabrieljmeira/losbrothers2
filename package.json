@@ -1,11 +1,11 @@
 {
-  "name": "estudo-lua",
+  "name": "losbrothers2",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview --host"
   },
   "dependencies": {
