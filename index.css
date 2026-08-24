@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #100805;
+  color: #f7ead8;
+}
+
+.soft-transition {
+  position: relative;
+}
+
+.soft-transition::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 72px;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--transition-color));
+}
+
+.hero-transition::after {
+  z-index: 1;
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--transition-color) 45%, transparent) 42%,
+    var(--transition-color) 100%
+  );
+}
+
+.transition-to-menu {
+  --transition-color: #100805;
+}
+
+.transition-to-about {
+  --transition-color: #160a06;
+}
+
+.transition-to-visit {
+  --transition-color: #100805;
+}
+
+.transition-to-footer {
+  --transition-color: #0c0503;
+}
